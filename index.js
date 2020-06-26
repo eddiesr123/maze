@@ -1,6 +1,6 @@
-const renderGame = (setting = 10) => {
-  const { Engine, Render, Runner, World, Bodies, Body, Events } = Matter;
+const { Engine, Render, Runner, World, Bodies, Body, Events } = Matter;
 
+const renderGame = (setting = 10) => {
   const cellsHorizontal = setting;
   const cellsVertical = Math.round(cellsHorizontal / 1.618);
   const width = window.innerWidth;
