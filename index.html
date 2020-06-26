@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Escape the Maze</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      h1 {
+        color: white;
+        font-size: 64px;
+      }
+
+      .winner {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .start {
+        color: white;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        height: 100vh;
+        width: 100vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="winner hidden">
+      <h1>You Win!</h1>
+      <button id="restart" class="big ui secondary button">Restart</button>
+    </div>
+    <div class="start">
+      <h1>Escape the Maze</h1>
+      <h2>Select Difficulty:</h2>
+      <div>
+        <button id="easy" class="ui inverted yellow button setting" value="10">
+          Easy
+        </button>
+        <button
+          id="medium"
+          class="ui inverted orange button setting"
+          value="20"
+        >
+          Medium
+        </button>
+        <button id="hard" class="ui inverted red button setting" value="30">
+          Hard
+        </button>
+      </div>
+      <h3>
+        Navigate maze by pressing W,S,A, and D on Keyboard
+      </h3>
+      <h4>W = Up, S = Down, A = Left, D = Right</h4>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
